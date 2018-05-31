@@ -25,6 +25,29 @@
       font-family: sans-serif;
       font-weight: bold;
     }
+    #alert-copied {
+      position: fixed;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      transform: translateY(100%);
+    }
+    #alert-copied.go {
+      animation-name: alert;
+    }
+    @keyframes alert {
+      0% {
+        transform: translateY(100%);
+      }
+      20%,70% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(100%);
+      }
+    }
 
   </style>
 </head>
@@ -68,6 +91,10 @@
     <p class="clipboard-content clipboard-init">
       Ei nec quaeque percipitur, et sit deleniti copiosae dissentiunt. Pri everti latine eu, vix illud labores philosophia an. Mel nobis fastidii ei, reque vocent inciderint pri at. No vis minim dolorem, ipsum tacimates elaboraret vis ex, sonet quaeque maiestatis mea cu. Ancillae accumsan iudicabit qui id. Pro ut quodsi detraxit.
     </p>
+  </div>
+
+  <div id="alert-copied" class="bg-dark text-white p-3 text-center">
+    Copy to clipboard successfull.
   </div>
   
   <script type="text/javascript" src="src/js/app.js"></script>
